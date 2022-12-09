@@ -1,4 +1,5 @@
 import React, { FC, ReactNode } from 'react'
+import style from './Card.module.css'
 
 interface Props {
   children: ReactNode
@@ -6,6 +7,6 @@ interface Props {
 
 export const Card: FC<Props> = ({ children }) => {
   return (
-    <div>{children}</div>
+    <div className={style.card}>{children}</div>
   )
 }
