@@ -19,6 +19,7 @@ specifiers:
   '@typescript-eslint/eslint-plugin': ^5.0.0
   '@typescript-eslint/parser': ^5.46.1
   babel-loader: ^8.3.0
+  css-loader: ^6.7.3
   eslint: ^8.0.1
   eslint-config-next: 13.0.2
   eslint-config-prettier: ^8.5.0
@@ -31,12 +32,14 @@ specifiers:
   eslint-plugin-storybook: ^0.6.8
   next: 13.0.2
   postcss: ^8.4.20
+  postcss-loader: ^7.0.2
   prettier: ^2.8.1
   react: 18.2.0
   react-dom: 18.2.0
   react-icons: ^4.7.1
   require-from-string: ^2.0.2
   storybook-addon-next: ^1.7.1
+  style-loader: ^3.3.1
   typescript: '*'
   webpack: ^5.75.0
 
@@ -66,6 +69,7 @@ devDependencies:
   '@typescript-eslint/eslint-plugin': 5.46.0_yvmkxpcz3xopwccvq53j6oac34
   '@typescript-eslint/parser': 5.46.1_wyqvi574yv7oiwfeinomdzmc3m
   babel-loader: 8.3.0_ztqwsvkb6z73luspkai6ilstpu
+  css-loader: 6.7.3_webpack@5.75.0
   eslint: 8.26.0
   eslint-config-prettier: 8.5.0_eslint@8.26.0
   eslint-config-standard-with-typescript: 23.0.0_jsukjcng3jlbzkhctycju7gq7u
@@ -76,9 +80,11 @@ devDependencies:
   eslint-plugin-react-hooks: 4.6.0_eslint@8.26.0
   eslint-plugin-storybook: 0.6.8_wyqvi574yv7oiwfeinomdzmc3m
   postcss: 8.4.20
+  postcss-loader: 7.0.2_qxxfhhrl3yknjjmta266mo3u64
   prettier: 2.8.1
   require-from-string: 2.0.2
   storybook-addon-next: 1.7.1_ujigtap5slucqskn6kpmkl7orq
+  style-loader: 3.3.1_webpack@5.75.0
   typescript: 4.8.4
   webpack: 5.75.0
 
@@ -4947,7 +4953,7 @@ packages:
       mississippi: 3.0.0
       mkdirp: 0.5.6
       move-concurrently: 1.0.1
-      promise-inflight: 1.0.1_bluebird@3.7.2
+      promise-inflight: 1.0.1
       rimraf: 2.7.1
       ssri: 6.0.2
       unique-filename: 1.1.1
@@ -5557,6 +5563,23 @@ packages:
       postcss-modules-values: 4.0.0_postcss@8.4.20
       postcss-value-parser: 4.2.0
       schema-utils: 3.1.1
+      semver: 7.3.8
+      webpack: 5.75.0
+    dev: true
+
+  /css-loader/6.7.3_webpack@5.75.0:
+    resolution: {integrity: sha512-qhOH1KlBMnZP8FzRO6YCH9UHXQhVMcEGLyNdb7Hv2cpcmJbW0YrddO+tG1ab5nT41KpHIYGsbeHqxB9xPu1pKQ==}
+    engines: {node: '>= 12.13.0'}
+    peerDependencies:
+      webpack: ^5.0.0
+    dependencies:
+      icss-utils: 5.1.0_postcss@8.4.20
+      postcss: 8.4.20
+      postcss-modules-extract-imports: 3.0.0_postcss@8.4.20
+      postcss-modules-local-by-default: 4.0.0_postcss@8.4.20
+      postcss-modules-scope: 3.0.0_postcss@8.4.20
+      postcss-modules-values: 4.0.0_postcss@8.4.20
+      postcss-value-parser: 4.2.0
       semver: 7.3.8
       webpack: 5.75.0
     dev: true
@@ -9797,17 +9820,6 @@ packages:
         optional: true
     dev: true
 
-  /promise-inflight/1.0.1_bluebird@3.7.2:
-    resolution: {integrity: sha512-6zWPyEOFaQBJYcGMHBKTKJ3u6TBsnMFOIZSa6ce1e/ZrrsOlnHRHbabMjLiBYKp+n44X9eUI6VUPaukCXHuG4g==}
-    peerDependencies:
-      bluebird: '*'
-    peerDependenciesMeta:
-      bluebird:
-        optional: true
-    dependencies:
-      bluebird: 3.7.2
-    dev: true
-
   /promise.allsettled/1.0.6:
     resolution: {integrity: sha512-22wJUOD3zswWFqgwjNHa1965LvqTX87WPu/lreY2KSd7SVcERfuZ4GfUaOnJNnvtoIv2yXT/W00YIGMetXtFXg==}
     engines: {node: '>= 0.4'}
@@ -11062,6 +11074,15 @@ packages:
     dependencies:
       loader-utils: 2.0.4
       schema-utils: 3.1.1
+      webpack: 5.75.0
+    dev: true
+
+  /style-loader/3.3.1_webpack@5.75.0:
+    resolution: {integrity: sha512-GPcQ+LDJbrcxHORTRes6Jy2sfvK2kS6hpSfI/fXhPt+spVzxF6LJ1dHLN9zIGmVaaP044YKaIatFaufENRiDoQ==}
+    engines: {node: '>= 12.13.0'}
+    peerDependencies:
+      webpack: ^5.0.0
+    dependencies:
       webpack: 5.75.0
     dev: true
 
