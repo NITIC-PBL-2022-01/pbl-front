@@ -5,7 +5,8 @@
     },
     "extends": [
         "plugin:react/recommended",
-        "standard-with-typescript"
+        "standard-with-typescript",
+        "prettier"
     ],
     "overrides": [
     ],
@@ -14,8 +15,15 @@
       "project": "./tsconfig.json"
     },
     "plugins": [
-        "react"
+        "react",
+        "react-hooks",
+        "@next/eslint-plugin-next"
     ],
     "rules": {
+    },
+    "settings": {
+        "react": {
+            "version": "detect"
+        }
     }
 }
