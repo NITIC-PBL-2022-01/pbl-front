@@ -45,8 +45,10 @@
     "eslint-plugin-react": "^7.31.11",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-storybook": "^0.6.8",
+    "postcss": "^8.4.20",
     "prettier": "^2.8.1",
     "require-from-string": "^2.0.2",
+    "storybook-addon-next": "^1.7.1",
     "typescript": "*",
     "webpack": "^5.75.0"
   }
