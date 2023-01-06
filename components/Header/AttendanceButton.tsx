@@ -23,4 +23,3 @@ export const AttendanceButton: FC<Props> = ({ iconLink, attendancePageLink }) =>
     </div>
   );
 };
-//
