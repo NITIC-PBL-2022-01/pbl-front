@@ -9,12 +9,11 @@
 }
 
 .text {
-    color: red
+
 }
 
 .image_container {
     width: 2rem;
     height: 2rem;
     position: relative;
-    border-radius: 50%;
 }
