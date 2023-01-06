@@ -1,5 +1,7 @@
 .outer {
+    float: right;
     display: flex;
+    flex-direction: column;
     align-items: center;
 }
 
@@ -10,11 +12,16 @@
 }
 
 .text {
-
+    width: 100%;
+    margin-top: 0.2rem;
+    margin-bottom: 0.2rem;
+    font-size: 98%;
+    text-align: center;
+    position: relative;
 }
 
 .image_container {
-    width: 5rem;
-    height: 5rem;
-    position: relative;
+    width: 3rem;
+    height: 3rem;
+    position:relative;
 }

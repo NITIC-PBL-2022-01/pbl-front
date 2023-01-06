@@ -14,10 +14,10 @@ export const AttendanceButton: FC<Props> = ({ iconLink, attendancePageLink }) =>
     <div className={style.outer}>
       <Link href={attendancePageLink} passHref>
         <>
-          <p className={style.text}>出席確認へ</p>
           <div className={style.image_container}>
             <Image src={iconLink} alt="profile image" className={style.image} fill />
           </div>
+          <p className={style.text}>出席確認へ</p>
         </>
       </Link>
     </div>
