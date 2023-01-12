@@ -1,8 +1,18 @@
-import React from 'react';
-import '../styles/globals.css';
-import type { AppProps } from 'next/app';
+import React from "react";
+import "../styles/globals.css";
+import { M_PLUS_2 } from "@next/font/google";
+import type { AppProps } from "next/app";
+
+const font = M_PLUS_2({
+  weight: ["400", "600"],
+  subsets: ["latin", "japanese"],
+});
 
 // eslint-disable-next-line
-export default function App ({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />;
+export default function App({ Component, pageProps }: AppProps) {
+  return (
+    <main className={font.className}>
+      <Component {...pageProps} />
+    </main>
+  );
 }
