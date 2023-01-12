@@ -1,4 +1,5 @@
 import React, { FC } from "react";
+import { Label } from "./Label";
 
 // TODO: replace this
 interface Event {
@@ -13,6 +14,12 @@ interface Props {
 }
 
 export const Cell: FC<Props> = ({ events, date, isOutside }) => {
-  // TODO: implement this
-  return <></>;
+  return (
+    <div>
+      <p>{date}</p>
+      {events.map((e, i) => (
+        <Label title={e.title} color={e.color} key={i} />
+      ))}
+    </div>
+  );
 };

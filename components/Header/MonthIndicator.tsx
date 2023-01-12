@@ -1,12 +1,12 @@
-import React, { FC } from 'react';
-import style from './MonthIndicator.module.css';
+import React, { FC } from "react";
+import style from "./MonthIndicator.module.css";
 
 interface Props {
-  year: number
-  month: number
+  year: number;
+  month: number;
 }
 
-export const MonthIndicator: FC <Props> = ({ year, month }) => {
+export const MonthIndicator: FC<Props> = ({ year, month }) => {
   return (
     <div className={style.indicator}>
       <span className={style.year}>{year}</span>

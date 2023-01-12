@@ -14,5 +14,5 @@ interface Props {
 
 export const Calendar: FC<Props> = () => {
   // TODO: implement this
-  return <></>
+  return <></>;
 };
