@@ -5,11 +5,11 @@ const nextConfig = {
   images: {
     remotePatterns: [
       {
-        protocol: 'https',
+        protocol: "https",
         hostname: "picsum.photos",
-      }
-    ]
-  }
-}
+      },
+    ],
+  },
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;
