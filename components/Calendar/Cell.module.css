@@ -1,0 +1,10 @@
+.labelWrapper {
+  overflow-y: auto;
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+
+.date {
+  text-align: center;
+  font-weight: bold;
+}

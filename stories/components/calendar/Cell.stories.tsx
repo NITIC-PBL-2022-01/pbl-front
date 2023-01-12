@@ -7,12 +7,14 @@ export default {
 };
 
 export const Default = () => (
-  <Cell
-    date={20}
-    events={[
-      { title: "This is event", color: "#F00" },
-      { title: "This is event", color: "#F00" },
-    ]}
-    isOutside
-  />
+  <div style={{ width: "20rem" }}>
+    <Cell
+      date={20}
+      events={[
+        { title: "This is event", color: "#F00" },
+        { title: "This is event", color: "#F00" },
+      ]}
+      isOutside
+    />
+  </div>
 );

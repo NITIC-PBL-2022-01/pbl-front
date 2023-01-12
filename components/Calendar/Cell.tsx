@@ -1,5 +1,6 @@
 import React, { FC } from "react";
 import { Label } from "./Label";
+import styles from "./Cell.module.css";
 
 // TODO: replace this
 interface Event {
@@ -15,11 +16,13 @@ interface Props {
 
 export const Cell: FC<Props> = ({ events, date, isOutside }) => {
   return (
-    <div>
-      <p>{date}</p>
-      {events.map((e, i) => (
-        <Label title={e.title} color={e.color} key={i} />
-      ))}
+    <div className={isOutside ? styles.cell : styles.outside}>
+      <p className={styles.date}>{date}</p>
+      <div className={styles.labelWrapper}>
+        {events.map((e, i) => (
+          <Label title={e.title} color={e.color} key={i} />
+        ))}
+      </div>
     </div>
   );
 };
