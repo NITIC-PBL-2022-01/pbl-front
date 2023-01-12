@@ -1,12 +1,10 @@
-import React from 'react';
+import React from "react";
 
-import { MenuIcon } from '../../../components/Header/MenuIcon';
+import { MenuIcon } from "../../../components/Header/MenuIcon";
 
 export default {
-  title: 'Common/Header/MenuIcon',
-  component: MenuIcon
+  title: "Common/Header/MenuIcon",
+  component: MenuIcon,
 };
 
-export const Default = () => (
-  <MenuIcon onClick={() => console.log('test')} />
-);
+export const Default = () => <MenuIcon onClick={() => console.log("test")} />;

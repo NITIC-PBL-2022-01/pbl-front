@@ -1,11 +1,15 @@
-import React from 'react';
-import { Calendar } from '../../../components/Calendar/Index';
+import React from "react";
+import { Calendar } from "../../../components/Calendar/Index";
 
 export default {
-  title: 'Common/Calendar/Calendar',
+  title: "Common/Calendar/Calendar",
   component: Calendar,
 };
 
 export const Default = () => (
-  <Calendar events={[{ title: "This is event", color: "#F00" }]} year={2023} month={2} />
+  <Calendar
+    events={[{ title: "This is event", color: "#F00" }]}
+    year={2023}
+    month={2}
+  />
 );
