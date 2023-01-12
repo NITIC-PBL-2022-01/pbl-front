@@ -12,7 +12,7 @@ interface Event {
 }
 
 interface Props {
-  events: Array<Event>;
+  events: Event[];
   date: number;
   isOutside: boolean;
 }

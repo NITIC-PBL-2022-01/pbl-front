@@ -1,5 +1,5 @@
 import dayjs, { Dayjs } from "dayjs";
-import { FC } from "react";
+import React, { FC } from "react";
 import { Cell } from "./Cell";
 import styles from "./Index.module.css";
 
@@ -12,13 +12,13 @@ interface Event {
 }
 
 interface Props {
-  events: Array<Event>;
+  events: Event[];
   year: number;
   month: number;
 }
 
 export const Calendar: FC<Props> = ({ events, year, month }) => {
-  const dates: Array<Dayjs> = [];
+  const dates = [];
   const firstDate = dayjs(new Date(year, month, 1));
   const finalDate = dayjs(new Date(year, month, 1))
     .add(1, "month")
@@ -41,10 +41,10 @@ export const Calendar: FC<Props> = ({ events, year, month }) => {
   for (let i = finalDateWeekDay; i < 6; i++)
     dates.push(finalDate.add(i - finalDateWeekDay + 1, "day"));
 
-  const weeks: Array<Array<Dayjs>> = [];
+  const weeks: Dayjs[][] = [];
 
   dates.forEach((d, i) => {
-    if (i % 7 == 0) weeks.push([]);
+    if (i % 7 === 0) weeks.push([]);
     weeks[weeks.length - 1].push(d);
   });
 
@@ -56,10 +56,10 @@ export const Calendar: FC<Props> = ({ events, year, month }) => {
             <Cell
               key={di}
               events={events.filter(
-                (e) => e.date.month() == d.month() && e.date.date() == d.date()
+                (e) => e.date.month() === d.month() && e.date.date() === d.date()
               )}
               date={d.date()}
-              isOutside={d.month() != firstDate.month()}
+              isOutside={d.month() !== firstDate.month()}
             />
           ))}
         </div>
