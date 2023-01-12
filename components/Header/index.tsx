@@ -1,14 +1,14 @@
-import { FC } from "react";
+import React, { FC } from "react";
 import { AttendanceButton } from "./AttendanceButton";
 import { MenuIcon } from "./MenuIcon";
 import { MonthIndicator } from "./MonthIndicator";
-import style from "./index.module.css"
+import style from "./index.module.css";
 
 
 interface Props {
   iconLink: string;
   attendancePageLink: string;
-  onMenuButtonClick(): void;
+  onMenuButtonClick: () => void;
   year: number;
   month: number;
 }

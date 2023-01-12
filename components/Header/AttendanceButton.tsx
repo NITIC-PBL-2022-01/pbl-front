@@ -1,7 +1,6 @@
-import React from "react";
+import React, { FC } from "react";
 import Image from 'next/image';
 import Link from 'next/link';
-import { FC } from 'react';
 import style from "./AttendanceButton.module.css";
 
 interface Props {

@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import React, { FC } from 'react';
 import style from './MonthIndicator.module.css';
 
 interface Props {
