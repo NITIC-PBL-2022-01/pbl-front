@@ -20,10 +20,12 @@
         "@next/eslint-plugin-next"
     ],
     "rules": {
+      "@typescript-eslint/semi": ["error", "always"]
     },
     "settings": {
         "react": {
             "version": "detect"
         }
-    }
+    },
+    "ignorePatterns": ["stories/*"]
 }

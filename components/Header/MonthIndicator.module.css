@@ -1,0 +1,14 @@
+.indicator {
+    height: 4rem;
+    width: auto;
+    text-align: center;
+    position: relative;
+}
+
+.year {
+    font-size: 2rem;
+}
+
+.month {
+    font-size: 3rem;
+}
