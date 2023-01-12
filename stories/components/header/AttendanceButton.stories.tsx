@@ -7,5 +7,8 @@ export default {
 };
 
 export const Default = () => (
-  <AttendanceButton attendancePageLink="/attendance" iconLink="https://picsum.photos/200/200" />
+  <AttendanceButton
+    attendancePageLink="/attendance"
+    iconLink="https://picsum.photos/200/200"
+  />
 );
