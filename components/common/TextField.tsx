@@ -1,5 +1,5 @@
 import { ChangeEvent, FC } from "react";
-import styles from "./Form.module.css";
+import styles from "./TextField.module.css";
 
 interface Props {
   disabled?: boolean;
@@ -11,7 +11,7 @@ interface Props {
   label?: string;
 }
 
-export const Form: FC<Props> = (props: Props) => {
+export const TextField: FC<Props> = (props: Props) => {
   return (
     <div className={styles.wrapper}>
       <label className={styles.label} htmlFor={props.name}>

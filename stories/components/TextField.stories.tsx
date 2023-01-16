@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import { Form } from "../../components/common/From";
+import { TextField } from "../../components/common/TextField";
 
 export default {
   title: "Common/Form",
-  component: Form,
+  component: TextField,
   argTypes: {
     disabled: {
       control: "boolean",
@@ -15,10 +15,16 @@ export default {
   },
 };
 
-export const Default = ({ disabled, type }: { disabled: boolean, type: string }) => {
+export const Default = ({
+  disabled,
+  type,
+}: {
+  disabled: boolean;
+  type: string;
+}) => {
   const [text, setText] = useState("");
   return (
-    <Form
+    <TextField
       disabled={disabled}
       text={text}
       onChange={(text: string) => setText(() => text)}
