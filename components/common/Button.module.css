@@ -1,13 +1,12 @@
-.button {
-}
-
 .primary {
+  width: 100%;
   padding-top: 0.6rem;
   padding-bottom: 0.6rem;
   padding-left: 0.7rem;
   padding-right: 0.7rem;
   border-radius: 1.2rem;
   font-size: 1.1rem;
+  text-align: center;
 
   color: white;
   background-color: black;
@@ -15,16 +14,18 @@
 
 .primary:disabled {
   background-color: #9a9a9a;
-  color: #ECECEC;
+  color: #ececec;
 }
 
 .secondary {
+  width: 100%;
   padding-top: 0.6rem;
   padding-bottom: 0.6rem;
   padding-left: 0.7rem;
   padding-right: 0.7rem;
   border-radius: 1.2rem;
   font-size: 1.1rem;
+  text-align: center;
 
   color: black;
   background-color: white;
@@ -33,6 +34,6 @@
 
 .secondary:disabled {
   color: #9a9a9a;
-  background-color: #ECECEC;
+  background-color: #ececec;
   border: 0;
 }
