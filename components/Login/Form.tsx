@@ -14,7 +14,7 @@ interface State {
 
 export const LoginForm: FC<Props> = ({ login }) => {
   const [state, setState] = useState<State>({ email: "", password: "" });
-  const onSubmit = (e: FormEvent<HTMLFormElement>) => {
+  const onSubmit = (e: FormEvent<HTMLFormElement>): void => {
     e.preventDefault();
     login(state.email, state.password);
   };
