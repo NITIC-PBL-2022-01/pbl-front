@@ -15,13 +15,13 @@ export const Default = () => (
           title: "This is event",
           color: "#F00",
           date: dayjs(new Date(2023, 2, 4)),
-          time: "午前 5:00"
+          time: "午前 5:00",
         },
         {
           title: "This is event",
           color: "#F00",
           date: dayjs(new Date(2023, 2, 4)),
-          time: "午後 11:00"
+          time: "午後 11:00",
         },
         {
           title: "This is event",

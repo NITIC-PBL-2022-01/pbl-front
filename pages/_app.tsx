@@ -1,4 +1,5 @@
 import React from "react";
+import "destyle.css/destyle.min.css";
 import "../styles/globals.css";
 import { M_PLUS_2 } from "@next/font/google";
 import type { AppProps } from "next/app";

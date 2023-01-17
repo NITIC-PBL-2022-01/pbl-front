@@ -22,9 +22,9 @@
 .row {
   display: grid;
   grid-template-columns: repeat(7, calc(100% / 7));
-  border-top: 1px dashed #A8A8A8;
+  border-top: 1px dashed #a8a8a8;
 }
 
 .row:last-child {
-  border-bottom: 1px dashed #A8A8A8;
+  border-bottom: 1px dashed #a8a8a8;
 }

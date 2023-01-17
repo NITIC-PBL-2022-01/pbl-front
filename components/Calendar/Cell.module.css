@@ -6,23 +6,23 @@
 .cell {
   height: 100%;
   overflow-y: auto;
-  border-left: 1px dashed #A8A8A8;
+  border-left: 1px dashed #a8a8a8;
 }
 
 .cell:last-child {
-  border-right: 1px dashed #A8A8A8;
+  border-right: 1px dashed #a8a8a8;
 }
 
 .outside {
   height: 100%;
   overflow-y: auto;
-  border-left: 1px dashed #A8A8A8;
+  border-left: 1px dashed #a8a8a8;
 }
 
 .outside:last-child {
-  border-right: 1px dashed #A8A8A8;
+  border-right: 1px dashed #a8a8a8;
 }
 
 .outside > .date {
-  color: #A8A8A8
+  color: #a8a8a8;
 }

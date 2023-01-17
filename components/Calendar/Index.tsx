@@ -35,7 +35,7 @@ export const Calendar: FC<Props> = ({ events, year, month }) => {
     console.log("infinite");
     console.log(cache);
     dates.push(cache);
-    cache = cache.add(1, 'day');
+    cache = cache.add(1, "day");
   }
 
   for (let i = finalDateWeekDay; i < 6; i++)
@@ -56,7 +56,8 @@ export const Calendar: FC<Props> = ({ events, year, month }) => {
             <Cell
               key={di}
               events={events.filter(
-                (e) => e.date.month() === d.month() && e.date.date() === d.date()
+                (e) =>
+                  e.date.month() === d.month() && e.date.date() === d.date()
               )}
               date={d.date()}
               isOutside={d.month() !== firstDate.month()}
