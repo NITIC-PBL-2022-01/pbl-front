@@ -1,28 +1,21 @@
 import React, { FC } from "react";
 import { Label } from "./Label";
 import styles from "./Cell.module.css";
-import { Dayjs } from "dayjs";
-
-// TODO: replace this
-interface Event {
-  title: string;
-  date: Dayjs;
-  time?: string;
-  color: string;
-}
+import { Event } from "./Index";
 
 interface Props {
   events: Event[];
   date: number;
   isOutside: boolean;
+  onEventClick: (e: Event) => void;
 }
 
-export const Cell: FC<Props> = ({ events, date, isOutside }) => {
+export const Cell: FC<Props> = ({ events, date, isOutside, onEventClick }) => {
   return (
     <div className={isOutside ? styles.outside : styles.cell}>
       <p className={styles.date}>{date}</p>
       {events.map((e, i) => (
-        <Label title={e.title} color={e.color} key={i} time={e.time} />
+        <Label key={i} event={e} onEventClick={onEventClick} />
       ))}
     </div>
   );
