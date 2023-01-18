@@ -60,7 +60,7 @@ export const Calendar: FC<Props> = ({ events, year, month, tagAttendance }) => {
     weeks[weeks.length - 1].push(d);
   });
 
-  const onEventClick = (e: Event) => {
+  const onEventClick = (e: Event): void => {
     setSelected(() => e);
     setIsOpen(() => true);
   };

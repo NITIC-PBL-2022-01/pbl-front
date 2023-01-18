@@ -1,4 +1,4 @@
-import { ChangeEvent, FC, useState } from "react";
+import React, { ChangeEvent, FC, useState } from "react";
 import { PrimaryButton } from "../common/Button";
 import styles from "./Detail.module.css";
 
@@ -35,7 +35,7 @@ export const Detail: FC<Props> = ({ event, tagAttendance }) => {
   ];
   const [state, setState] = useState<string | null>(null);
 
-  const onChange = (e: ChangeEvent<HTMLSelectElement>) => {
+  const onChange = (e: ChangeEvent<HTMLSelectElement>): void => {
     setState(() => e.target.value);
   };
 
@@ -53,7 +53,7 @@ export const Detail: FC<Props> = ({ event, tagAttendance }) => {
         <h4>タグ名</h4>
         <p>{event.tag.name}</p>
       </div>
-      {event.tag.type == "Class" ? (
+      {event.tag.type === "Class" ? (
         <div className={styles.attendance}>
           <div>
             <label htmlFor="reason-selector">欠席する</label>
