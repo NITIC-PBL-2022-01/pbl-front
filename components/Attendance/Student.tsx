@@ -1,16 +1,7 @@
-import React, { Dayjs } from "dayjs";
+import React from "dayjs";
 import { FC } from "react";
 import styles from "./Student.module.css";
-
-export interface Attendance {
-  id: string;
-  date: Dayjs;
-  period: number;
-  reason: string;
-  tag: {
-    name: string;
-  };
-}
+import { Attendance } from "./Teacher";
 
 interface Props {
   attendances: Attendance[];

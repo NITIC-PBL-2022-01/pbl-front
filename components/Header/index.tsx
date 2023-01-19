@@ -26,7 +26,12 @@ export const Header: FC<Props> = ({
   return (
     <div className={style.header}>
       <MenuIcon onClick={onMenuButtonClick} />
-      <MonthIndicator year={year} month={month} incrementMonth={incrementMonth} decrementMonth={decrementMonth} />
+      <MonthIndicator
+        year={year}
+        month={month}
+        incrementMonth={incrementMonth}
+        decrementMonth={decrementMonth}
+      />
       <AttendanceButton
         iconLink={iconLink}
         attendancePageLink={attendancePageLink}

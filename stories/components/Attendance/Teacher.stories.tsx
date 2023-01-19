@@ -1,14 +1,14 @@
 import dayjs from "dayjs";
 import React from "react";
-import { StudentAttendance } from "../../../components/Attendance/Student";
+import { TeacherAttendance } from "../../../components/Attendance/Teacher";
 
 export default {
-  title: "Attendance/Student",
-  component: StudentAttendance,
+  title: "Attendance/Teacher",
+  component: TeacherAttendance,
 };
 
 export const Default = () => (
-  <StudentAttendance
+  <TeacherAttendance
     attendances={[
       {
         id: "0",
@@ -45,8 +45,8 @@ export const Default = () => (
           name: "タグ名",
         },
         user: {
-          email: "hoge@example.com",
-          name: "hoge",
+          email: "fuga@example.com",
+          name: "fuga",
         }
       },
       {
@@ -78,3 +78,4 @@ export const Default = () => (
     ]}
   />
 );
+
