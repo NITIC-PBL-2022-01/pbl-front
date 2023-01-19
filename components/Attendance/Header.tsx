@@ -7,7 +7,7 @@ export const Header: FC = () => {
   return (
     <div className={styles.header}>
       <Link passHref={true} href="/">
-        <Home size={64} />
+        <Home size={32} />
       </Link>
       <p className={styles.title}>出席管理</p>
     </div>
