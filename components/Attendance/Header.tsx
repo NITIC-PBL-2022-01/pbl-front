@@ -1,8 +1,9 @@
+import React, { FC } from "react";
 import Link from "next/link";
 import { Home } from "react-feather";
 import styles from "./Header.module.css";
 
-export const Header = () => {
+export const Header: FC = () => {
   return (
     <div className={styles.header}>
       <Link passHref={true} href="/">
