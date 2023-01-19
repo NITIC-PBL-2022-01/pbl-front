@@ -1,0 +1,20 @@
+.title {
+  font-size: 1.5rem;
+}
+
+.subject {
+  padding-top: 0.3rem;
+  padding-bottom: 0.3rem;
+}
+
+.attendance {
+  padding-bottom: 0.2rem;
+}
+
+.detail {
+  padding-bottom: 0.4rem;
+}
+
+.innerTitle {
+  font-size: 1.2rem;
+}
