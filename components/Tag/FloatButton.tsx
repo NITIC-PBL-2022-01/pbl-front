@@ -10,7 +10,8 @@ interface Props {
     name: string,
     color: string,
     admin: string[],
-    member: string[]
+    member: string[],
+    type: "HR" | "Class" | "None",
   ) => void;
   isStudent: boolean;
 }
@@ -25,7 +26,10 @@ interface State {
 
 export const TagAddingButton: FC<Props> = ({ addTag, isStudent }) => {
   const [isOpen, setIsOpen] = useState(false);
-  const onSubmit = (e: FormEvent<HTMLFormElement>) => {};
+  const onSubmit = (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    addTag(state.name, state.color, state.admin, state.member, state.type);
+  };
 
   const [state, setState] = useState<State>({
     name: "",

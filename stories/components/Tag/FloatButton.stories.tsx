@@ -8,14 +8,14 @@ export default {
 
 export const Student = () => (
   <TagAddingButton
-    addTag={(n: string, c: string, a: string[], m: string[]) => console.log(n, c, a, m)}
+    addTag={(n: string, c: string, a: string[], m: string[], t: string) => console.log(n, c, a, m, t)}
     isStudent={true}
   />
 );
 
 export const Teacher = () => (
   <TagAddingButton
-    addTag={(n: string, c: string, a: string[], m: string[]) => console.log(n, c, a, m)}
+    addTag={(n: string, c: string, a: string[], m: string[], t: string) => console.log(n, c, a, m, t)}
     isStudent={false}
   />
 );
