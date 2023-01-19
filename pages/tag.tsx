@@ -1,9 +1,10 @@
+import React from "react";
 import { NextPage } from "next";
 import { Header } from "../components/Tag/Header";
 import { ModeratingTagList } from "../components/Tag/ModeratingTagList";
 
 const TagPage: NextPage = () => {
-  const editTag = (id: string, name: string, color: string) => {
+  const editTag = (id: string, name: string, color: string): void => {
     console.log(id, name, color);
   };
   const moderatingTags = [
@@ -19,8 +20,8 @@ const TagPage: NextPage = () => {
       member: [
         {
           email: "fuga@example.com",
-        }
-      ]
+        },
+      ],
     },
     {
       name: "タグ2",
@@ -34,8 +35,8 @@ const TagPage: NextPage = () => {
       member: [
         {
           email: "fuga@example.com",
-        }
-      ]
+        },
+      ],
     },
     {
       name: "タグ3",
@@ -49,18 +50,15 @@ const TagPage: NextPage = () => {
       member: [
         {
           email: "fuga@example.com",
-        }
-      ]
+        },
+      ],
     },
   ];
   return (
     <div style={{ minHeight: "100vh" }}>
       <Header />
       <div style={{ padding: "1rem" }}>
-        <ModeratingTagList
-          editTag={editTag}
-          tags={moderatingTags}
-        />
+        <ModeratingTagList editTag={editTag} tags={moderatingTags} />
       </div>
     </div>
   );

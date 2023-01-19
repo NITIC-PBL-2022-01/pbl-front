@@ -14,19 +14,24 @@ interface DateState {
 export default function Home(): JSX.Element {
   const isStudent = false;
   const now = dayjs();
-  const [dateState, setDateState] = useState<DateState>({ year: now.year(), month: now.month() + 1 });
-
-  const incrementMonth = (): void => setDateState((state) => {
-    if (state.month === 12) return { year: state.year + 1, month: 1 };
-
-    return { ...state, month: state.month + 1 };
+  const [dateState, setDateState] = useState<DateState>({
+    year: now.year(),
+    month: now.month() + 1,
   });
 
-  const decrementMonth = (): void => setDateState((state) => {
-    if (state.month === 1) return { year: state.year - 1, month: 12 };
+  const incrementMonth = (): void =>
+    setDateState((state) => {
+      if (state.month === 12) return { year: state.year + 1, month: 1 };
 
-    return { ...state, month: state.month - 1 };
-  });
+      return { ...state, month: state.month + 1 };
+    });
+
+  const decrementMonth = (): void =>
+    setDateState((state) => {
+      if (state.month === 1) return { year: state.year - 1, month: 12 };
+
+      return { ...state, month: state.month - 1 };
+    });
 
   const tags = [
     {
@@ -148,15 +153,14 @@ export default function Home(): JSX.Element {
       id: "0",
       detail: "detail",
       duration: 120,
-      tag: { type: "Class",
-        name: "class",
-      },
+      tag: { type: "Class", name: "class" },
       title: "This is event",
       color: "#F00",
       date: dayjs(new Date(2023, 2, 28)),
     },
   ];
-  const tagAttendance = (id: string, reason: string): void => console.log(id, reason);
+  const tagAttendance = (id: string, reason: string): void =>
+    console.log(id, reason);
 
   const router = useRouter();
 
@@ -167,7 +171,10 @@ export default function Home(): JSX.Element {
         decrementMonth={decrementMonth}
         attendancePageLink="/attendance"
         iconLink="https://picsum.photos/200/200"
-        onMenuButtonClick={() => router.push("/tag")}
+        // eslint-disable-next-line
+        onMenuButtonClick={async () => {
+          await router.push("/tag");
+        }}
         year={dateState.year}
         month={dateState.month}
       />
@@ -177,7 +184,7 @@ export default function Home(): JSX.Element {
         month={dateState.month}
         events={events as Event[]}
       />
-      <EventAddingButton 
+      <EventAddingButton
         tags={tags}
         addEvent={(
           title: string,
@@ -192,17 +199,32 @@ export default function Home(): JSX.Element {
           location: string,
           isRepeat: boolean,
           repeat?: {
-            unit: string,
-            value: number,
-            since: Dayjs,
-            until: Dayjs,
+            unit: string;
+            value: number;
+            since: Dayjs;
+            until: Dayjs;
           }
-        ) => (
-          console.log(title, detail, tagID, color, date, time, duration, isTodo, done, location, isRepeat, repeat)
-        )}
+        ) =>
+          console.log(
+            title,
+            detail,
+            tagID,
+            color,
+            date,
+            time,
+            duration,
+            isTodo,
+            done,
+            location,
+            isRepeat,
+            repeat
+          )
+        }
       />
       <TagAddingButton
-        addTag={(n: string, c: string, a: string[], m: string[], t: string) => console.log(n, c, a, m, t)}
+        addTag={(n: string, c: string, a: string[], m: string[], t: string) =>
+          console.log(n, c, a, m, t)
+        }
         isStudent={isStudent}
       />
     </div>

@@ -28,13 +28,19 @@ export const ModeratingTagList: FC<Props> = ({ tags, editTag }) => {
 
   return (
     <div>
-      <h3 style={{ fontSize: "1.5rem", fontWeight: "bold" }}>管理しているタグ</h3>
+      <h3 style={{ fontSize: "1.5rem", fontWeight: "bold" }}>
+        管理しているタグ
+      </h3>
       {tags.map((t, i) => (
-        <ModeratingTag tag={t} key={i} onClick={() => {
-          setSelected(t);
-          setState({ name: t.name, color: t.color });
-          setIsOpen(true);
-        }} />
+        <ModeratingTag
+          tag={t}
+          key={i}
+          onClick={() => {
+            setSelected(t);
+            setState({ name: t.name, color: t.color });
+            setIsOpen(true);
+          }}
+        />
       ))}
       <Modal isOpen={isOpen} onRequestClose={() => setIsOpen(() => false)}>
         <h3 style={{ fontSize: "1.2rem", fontWeight: "bold" }}>タグの更新</h3>
