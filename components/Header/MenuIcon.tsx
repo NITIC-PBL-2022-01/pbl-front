@@ -9,7 +9,7 @@ interface Props {
 
 export const MenuIcon: FC<Props> = ({ onClick }) => {
   return (
-    <div onClick={onClick}>
+    <div onClick={onClick} style={{ cursor: "pointer" }}>
       <IconContext.Provider value={{ className: style.icon }}>
         <BiMenu />
       </IconContext.Provider>

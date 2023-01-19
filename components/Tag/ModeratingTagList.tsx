@@ -19,7 +19,7 @@ export const ModeratingTagList: FC<Props> = ({ tags, editTag }) => {
   const [selected, setSelected] = useState<Tag | null>(null);
   const [state, setState] = useState<State>({ name: "", color: "" });
 
-  const onSubmit = (e: FormEvent<HTMLFormElement>) => {
+  const onSubmit = (e: FormEvent<HTMLFormElement>): void => {
     e.preventDefault();
 
     if (selected == null) return;
@@ -28,6 +28,7 @@ export const ModeratingTagList: FC<Props> = ({ tags, editTag }) => {
 
   return (
     <div>
+      <h3 style={{ fontSize: "1.5rem", fontWeight: "bold" }}>管理しているタグ</h3>
       {tags.map((t, i) => (
         <ModeratingTag tag={t} key={i} onClick={() => {
           setSelected(t);

@@ -9,7 +9,7 @@ export const Header: FC = () => {
       <Link passHref={true} href="/">
         <Home size={32} />
       </Link>
-      <p className={styles.title}>出席管理</p>
+      <p className={styles.title}>タグ管理</p>
     </div>
   );
 };

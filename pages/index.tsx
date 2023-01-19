@@ -1,4 +1,5 @@
 import dayjs, { Dayjs } from "dayjs";
+import { useRouter } from "next/router";
 import React, { useState } from "react";
 import { Calendar, Event } from "../components/Calendar/Index";
 import { EventAddingButton } from "../components/Event/FloatButton";
@@ -157,6 +158,8 @@ export default function Home(): JSX.Element {
   ];
   const tagAttendance = (id: string, reason: string): void => console.log(id, reason);
 
+  const router = useRouter();
+
   return (
     <div style={{ height: "calc(100vh - 6rem)" }}>
       <Header
@@ -164,7 +167,7 @@ export default function Home(): JSX.Element {
         decrementMonth={decrementMonth}
         attendancePageLink="/attendance"
         iconLink="https://picsum.photos/200/200"
-        onMenuButtonClick={() => console.log("test")}
+        onMenuButtonClick={() => router.push("/tag")}
         year={dateState.year}
         month={dateState.month}
       />
