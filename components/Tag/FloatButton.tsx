@@ -11,7 +11,7 @@ interface Props {
     color: string,
     admin: string[],
     member: string[],
-    type: "HR" | "Class" | "None",
+    type: "HR" | "Class" | "None"
   ) => void;
   isStudent: boolean;
 }
@@ -42,8 +42,10 @@ export const TagAddingButton: FC<Props> = ({ addTag, isStudent }) => {
   const [member, setMember] = useState("");
 
   return (
-    <div className={styles.wrapper}>
-      <Tag size={28} onClick={() => setIsOpen(() => true)} />
+    <>
+      <div className={styles.wrapper}>
+        <Tag size={28} onClick={() => setIsOpen(() => true)} />
+      </div>
       <Modal isOpen={isOpen} onRequestClose={() => setIsOpen(() => false)}>
         <h2 className={styles.title}>タグの追加</h2>
         <form onSubmit={onSubmit} className={styles.form}>
@@ -140,7 +142,10 @@ export const TagAddingButton: FC<Props> = ({ addTag, isStudent }) => {
                 value={state.type}
                 id="type-selector"
                 onChange={(e: ChangeEvent<HTMLSelectElement>) =>
-                  setState((state) => ({ ...state, type: e.target.value as "None" | "HR" | "Class" }))
+                  setState((state) => ({
+                    ...state,
+                    type: e.target.value as "None" | "HR" | "Class",
+                  }))
                 }
               >
                 <option value="None">種別なし</option>
@@ -152,6 +157,6 @@ export const TagAddingButton: FC<Props> = ({ addTag, isStudent }) => {
           <PrimaryButton text="作成" />
         </form>
       </Modal>
-    </div>
+    </>
   );
 };
