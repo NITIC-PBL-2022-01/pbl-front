@@ -7,7 +7,7 @@
   border-radius: 50%;
   cursor: pointer;
   position: absolute;
-  bottom: calc(48px + 2rem);
+  bottom: 1rem;
   right: 1rem;
 }
 
@@ -45,4 +45,15 @@
   font-size: 1.2rem;
   margin-bottom: 1rem;
   font-weight: bold;
+}
+
+.oneline {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.oneline > input {
+  margin-bottom: 0 !important;
 }
