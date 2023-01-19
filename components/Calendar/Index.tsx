@@ -1,28 +1,40 @@
 import dayjs, { Dayjs } from "dayjs";
-import React, { FC } from "react";
+import React, { FC, useState } from "react";
+import Modal from "react-modal";
+import { Detail } from "../Event/Detail";
 import { Cell } from "./Cell";
 import styles from "./Index.module.css";
 
-// TODO: replace this
-interface Event {
+export interface Event {
+  id: string;
   title: string;
+  detail: string;
+  duration: number;
   color: string;
   date: Dayjs;
   time?: string;
+  tag: {
+    name: string;
+    type: "HR" | "Class" | "None";
+  };
 }
 
 interface Props {
   events: Event[];
   year: number;
   month: number;
+  tagAttendance: (id: string, reason: string) => void;
 }
 
-export const Calendar: FC<Props> = ({ events, year, month }) => {
+export const Calendar: FC<Props> = ({ events, year, month, tagAttendance }) => {
   const dates = [];
   const firstDate = dayjs(new Date(year, month, 1));
   const finalDate = dayjs(new Date(year, month, 1))
     .add(1, "month")
     .subtract(1, "day");
+
+  const [isOpen, setIsOpen] = useState(false);
+  const [selected, setSelected] = useState<Event | null>(null);
 
   const firstDateWeekDay = firstDate.day();
   const finalDateWeekDay = finalDate.day();
@@ -48,6 +60,11 @@ export const Calendar: FC<Props> = ({ events, year, month }) => {
     weeks[weeks.length - 1].push(d);
   });
 
+  const onEventClick = (e: Event): void => {
+    setSelected(() => e);
+    setIsOpen(() => true);
+  };
+
   return (
     <div className={styles[`wrapper_${weeks.length}`]}>
       {weeks.map((w, wi) => (
@@ -61,10 +78,19 @@ export const Calendar: FC<Props> = ({ events, year, month }) => {
               )}
               date={d.date()}
               isOutside={d.month() !== firstDate.month()}
+              onEventClick={onEventClick}
             />
           ))}
         </div>
       ))}
+      <Modal isOpen={isOpen} onRequestClose={() => setIsOpen(false)}>
+        {selected != null ? (
+          <Detail
+            event={selected}
+            tagAttendance={(r: string) => tagAttendance(selected.id, r)}
+          />
+        ) : undefined}
+      </Modal>
     </div>
   );
 };

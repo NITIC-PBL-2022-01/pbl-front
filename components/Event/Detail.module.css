@@ -1,0 +1,32 @@
+.title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.attendance {
+  padding-top: 2rem;
+  display: flex;
+}
+
+.attendance > div > label {
+  display: block;
+}
+
+.attendance > div > select {
+  background-color: #EFEFEF;
+  padding: 0.2rem;
+}
+
+.button {
+  margin-left: 2rem;
+  width: 5rem;
+}
+
+.description {
+  padding-top: 0.3rem;
+  padding-bottom: 0.3rem;
+}
+
+.description > h4 {
+  font-size: 0.8rem;
+}

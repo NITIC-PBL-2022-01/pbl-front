@@ -1,16 +1,20 @@
 import React, { FC } from "react";
+import { Event } from "./Index";
 import styles from "./Label.module.css";
 
 interface Props {
-  title: string;
-  color: string;
-  time?: string;
+  event: Event;
+  onEventClick: (e: Event) => void;
 }
 
-export const Label: FC<Props> = ({ color, title, time }) => {
+export const Label: FC<Props> = ({ event, onEventClick }) => {
   return (
-    <div style={{ backgroundColor: color }} className={styles.label}>
-      {time} {title}
+    <div
+      style={{ backgroundColor: event.color }}
+      className={styles.label}
+      onClick={() => onEventClick(event)}
+    >
+      {event.time} {event.title}
     </div>
   );
 };
