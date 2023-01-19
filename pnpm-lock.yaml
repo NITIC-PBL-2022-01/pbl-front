@@ -40,6 +40,7 @@ specifiers:
   prettier: ^2.8.1
   react: 18.2.0
   react-dom: 18.2.0
+  react-feather: ^2.0.10
   react-icons: ^4.7.1
   react-modal: ^3.16.1
   require-from-string: ^2.0.2
@@ -60,6 +61,7 @@ dependencies:
   next: 13.0.2_672uxklweod7ene3nqtsh262ca
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
+  react-feather: 2.0.10_react@18.2.0
   react-icons: 4.7.1_react@18.2.0
   react-modal: 3.16.1_biqbaboplfbrettd7655fr4n2y
   styled-jsx: 5.1.1_zavbqmrropwrojvx6ojaa4s7im
@@ -10071,6 +10073,15 @@ packages:
       react-dom: 18.2.0_react@18.2.0
       react-is: 17.0.2
     dev: true
+
+  /react-feather/2.0.10_react@18.2.0:
+    resolution: {integrity: sha512-BLhukwJ+Z92Nmdcs+EMw6dy1Z/VLiJTzEQACDUEnWMClhYnFykJCGWQx+NmwP/qQHGX/5CzQ+TGi8ofg2+HzVQ==}
+    peerDependencies:
+      react: '>=16.8.6'
+    dependencies:
+      prop-types: 15.8.1
+      react: 18.2.0
+    dev: false
 
   /react-icons/4.7.1_react@18.2.0:
     resolution: {integrity: sha512-yHd3oKGMgm7zxo3EA7H2n7vxSoiGmHk5t6Ou4bXsfcgWyhfDKMpyKfhHR6Bjnn63c+YXBLBPUql9H4wPJM6sXw==}

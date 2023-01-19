@@ -17,14 +17,17 @@ interface Props {
 }
 
 export const StudentAttendance: FC<Props> = ({ attendances }) => {
-  const distributedRecord = attendances.reduce<Record<string, Attendance[]>>((prev, curr) => {
-    if (Object.entries(prev).find(([key]) => key === curr.tag.name) != null) {
-      prev[curr.tag.name].push(curr);
-    } else {
-      prev[curr.tag.name] = [curr];
-    }
-    return prev;
-  }, {});
+  const distributedRecord = attendances.reduce<Record<string, Attendance[]>>(
+    (prev, curr) => {
+      if (Object.entries(prev).find(([key]) => key === curr.tag.name) != null) {
+        prev[curr.tag.name].push(curr);
+      } else {
+        prev[curr.tag.name] = [curr];
+      }
+      return prev;
+    },
+    {}
+  );
 
   return (
     <div className={styles.wrapper}>
