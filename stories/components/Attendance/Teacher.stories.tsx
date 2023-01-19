@@ -20,7 +20,6 @@ export const Default = () => (
         },
         user: {
           email: "hoge@example.com",
-          name: "hoge",
         }
       },
       {
@@ -33,7 +32,6 @@ export const Default = () => (
         },
         user: {
           email: "hoge@example.com",
-          name: "hoge",
         }
       },
       {
@@ -46,7 +44,6 @@ export const Default = () => (
         },
         user: {
           email: "fuga@example.com",
-          name: "fuga",
         }
       },
       {
@@ -59,7 +56,6 @@ export const Default = () => (
         },
         user: {
           email: "hoge@example.com",
-          name: "hoge",
         }
       },
       {
@@ -72,7 +68,6 @@ export const Default = () => (
         },
         user: {
           email: "hoge@example.com",
-          name: "hoge",
         }
       },
     ]}
