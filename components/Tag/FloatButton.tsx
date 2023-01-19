@@ -26,7 +26,7 @@ interface State {
 
 export const TagAddingButton: FC<Props> = ({ addTag, isStudent }) => {
   const [isOpen, setIsOpen] = useState(false);
-  const onSubmit = (e: FormEvent<HTMLFormElement>) => {
+  const onSubmit = (e: FormEvent<HTMLFormElement>): void => {
     e.preventDefault();
     addTag(state.name, state.color, state.admin, state.member, state.type);
   };
