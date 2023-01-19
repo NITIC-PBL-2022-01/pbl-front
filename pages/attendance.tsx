@@ -18,7 +18,7 @@ const AttendancePage: NextPage = () => {
       },
       user: {
         email: "hoge@example.com",
-      }
+      },
     },
     {
       id: "0",
@@ -30,7 +30,7 @@ const AttendancePage: NextPage = () => {
       },
       user: {
         email: "hoge@example.com",
-      }
+      },
     },
     {
       id: "0",
@@ -42,7 +42,7 @@ const AttendancePage: NextPage = () => {
       },
       user: {
         email: "fuga@example.com",
-      }
+      },
     },
     {
       id: "0",
@@ -54,7 +54,7 @@ const AttendancePage: NextPage = () => {
       },
       user: {
         email: "hoge@example.com",
-      }
+      },
     },
     {
       id: "0",
@@ -66,7 +66,7 @@ const AttendancePage: NextPage = () => {
       },
       user: {
         email: "hoge@example.com",
-      }
+      },
     },
   ];
 
@@ -74,7 +74,11 @@ const AttendancePage: NextPage = () => {
     <div style={{ minHeight: "100vh" }}>
       <Header />
       <div style={{ padding: "1rem" }}>
-        { isStudent ? <StudentAttendance attendances={attendances} /> : <TeacherAttendance attendances={attendances} /> }
+        {isStudent ? (
+          <StudentAttendance attendances={attendances} />
+        ) : (
+          <TeacherAttendance attendances={attendances} />
+        )}
       </div>
     </div>
   );

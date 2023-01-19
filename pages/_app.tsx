@@ -12,7 +12,7 @@ const font = M_PLUS_2({
 // eslint-disable-next-line
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <main className={font.className} style={{ minHeight: "100vh"}}>
+    <main className={font.className} style={{ minHeight: "100vh" }}>
       <Component {...pageProps} />
     </main>
   );
