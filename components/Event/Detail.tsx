@@ -57,7 +57,11 @@ export const Detail: FC<Props> = ({ event, tagAttendance }) => {
         <div className={styles.attendance}>
           <div>
             <label htmlFor="reason-selector">欠席する</label>
-            <select value={state ?? ""} id="reason-selector" onChange={onChange}>
+            <select
+              value={state ?? ""}
+              id="reason-selector"
+              onChange={onChange}
+            >
               <option value="">理由を選択してください</option>
               {selectValues.map((e, i) => (
                 <option value={e} key={i}>
