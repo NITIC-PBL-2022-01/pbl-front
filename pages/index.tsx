@@ -15,14 +15,14 @@ export default function Home(): JSX.Element {
   const now = dayjs();
   const [dateState, setDateState] = useState<DateState>({ year: now.year(), month: now.month() + 1 });
 
-  const incrementMonth = () => setDateState((state) => {
-    if (state.month == 12) return { year: state.year + 1, month: 1 };
+  const incrementMonth = (): void => setDateState((state) => {
+    if (state.month === 12) return { year: state.year + 1, month: 1 };
 
     return { ...state, month: state.month + 1 };
   });
 
-  const decrementMonth = () => setDateState((state) => {
-    if (state.month == 1) return { year: state.year - 1, month: 12 };
+  const decrementMonth = (): void => setDateState((state) => {
+    if (state.month === 1) return { year: state.year - 1, month: 12 };
 
     return { ...state, month: state.month - 1 };
   });
@@ -155,7 +155,7 @@ export default function Home(): JSX.Element {
       date: dayjs(new Date(2023, 2, 28)),
     },
   ];
-  const tagAttendance = (id: string, reason: string) => console.log(id, reason);
+  const tagAttendance = (id: string, reason: string): void => console.log(id, reason);
 
   return (
     <div style={{ height: "calc(100vh - 6rem)" }}>

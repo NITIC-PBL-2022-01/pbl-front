@@ -7,7 +7,7 @@ import { TextField } from "../common/TextField";
 import styles from "./FloatButton.module.css";
 
 interface Props {
-  tags: { name: string; color: string; id: string }[];
+  tags: Array<{ name: string; color: string; id: string }>;
   addEvent: (
     title: string,
     detail: string,
@@ -67,7 +67,7 @@ export const EventAddingButton: FC<Props> = ({ tags, addEvent }) => {
     until: null,
   });
 
-  const onSubmit = (e: FormEvent<HTMLFormElement>) => {
+  const onSubmit = (e: FormEvent<HTMLFormElement>): void => {
     e.preventDefault();
     addEvent(
       state.title,
