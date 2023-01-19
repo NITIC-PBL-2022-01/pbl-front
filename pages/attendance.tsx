@@ -1,3 +1,4 @@
+import React from "react";
 import dayjs from "dayjs";
 import { NextPage } from "next";
 import { Header } from "../components/Attendance/Header";
@@ -17,7 +18,6 @@ const AttendancePage: NextPage = () => {
       },
       user: {
         email: "hoge@example.com",
-        name: "hoge",
       }
     },
     {
@@ -30,7 +30,6 @@ const AttendancePage: NextPage = () => {
       },
       user: {
         email: "hoge@example.com",
-        name: "hoge",
       }
     },
     {
@@ -43,7 +42,6 @@ const AttendancePage: NextPage = () => {
       },
       user: {
         email: "fuga@example.com",
-        name: "fuga",
       }
     },
     {
@@ -56,7 +54,6 @@ const AttendancePage: NextPage = () => {
       },
       user: {
         email: "hoge@example.com",
-        name: "hoge",
       }
     },
     {
@@ -69,7 +66,6 @@ const AttendancePage: NextPage = () => {
       },
       user: {
         email: "hoge@example.com",
-        name: "hoge",
       }
     },
   ];

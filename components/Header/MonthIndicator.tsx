@@ -9,7 +9,12 @@ interface Props {
   decrementMonth: () => void;
 }
 
-export const MonthIndicator: FC<Props> = ({ year, month, incrementMonth, decrementMonth }) => {
+export const MonthIndicator: FC<Props> = ({
+  year,
+  month,
+  incrementMonth,
+  decrementMonth,
+}) => {
   return (
     <div className={style.wrapper}>
       <ArrowLeft size={32} className={style.button} onClick={decrementMonth} />

@@ -1,4 +1,4 @@
-import React, { Dayjs } from "dayjs";
+import React from "dayjs";
 import { FC } from "react";
 import styles from "./Student.module.css";
 import { Attendance } from "./Teacher";
