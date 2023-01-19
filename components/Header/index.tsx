@@ -10,6 +10,8 @@ interface Props {
   onMenuButtonClick: () => void;
   year: number;
   month: number;
+  incrementMonth: () => void;
+  decrementMonth: () => void;
 }
 
 export const Header: FC<Props> = ({
@@ -18,11 +20,13 @@ export const Header: FC<Props> = ({
   onMenuButtonClick,
   year,
   month,
+  incrementMonth,
+  decrementMonth,
 }) => {
   return (
     <div className={style.header}>
       <MenuIcon onClick={onMenuButtonClick} />
-      <MonthIndicator year={year} month={month} />
+      <MonthIndicator year={year} month={month} incrementMonth={incrementMonth} decrementMonth={decrementMonth} />
       <AttendanceButton
         iconLink={iconLink}
         attendancePageLink={attendancePageLink}
