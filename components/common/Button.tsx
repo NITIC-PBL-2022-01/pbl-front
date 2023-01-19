@@ -5,15 +5,22 @@ interface Props {
   disabled?: boolean;
   text: string;
   onClick?: () => void;
+  type?: "button" | "submit";
 }
 
 const SharedButton: FC<Props & { className: string }> = ({
   text,
   onClick,
   className,
+  type,
   disabled,
 }) => (
-  <button disabled={disabled} className={className} onClick={onClick}>
+  <button
+    disabled={disabled}
+    className={className}
+    onClick={onClick}
+    type={type}
+  >
     {text}
   </button>
 );
